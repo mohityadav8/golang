@@ -1,1 +1,9 @@
+Detailed Theory:
 
+Zero Values: Go does not have uninitialized variables. If you declare var x int, Go guarantees it is 0 (not garbage memory). Pointers, slices, and maps default to nil.
+
+Escape Analysis: When you declare a variable, the Go compiler determines where it lives. If a variable's reference outlives the function it was created in, the compiler "escapes" it to the Heap. Otherwise, it stays on the Stack (which is faster and GC-free).
+
+Untyped Constants: Constants in Go are fundamentally different from variables. An untyped constant (const x = 10) lives in a mathematically exact space. It has infinite precision until it is assigned to a strictly typed variable.
+
+Iota: Go uses the iota identifier for enumerations. It represents successive untyped integer constants, heavily used for bitmasking operations.
