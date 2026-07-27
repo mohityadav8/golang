@@ -1,1 +1,9 @@
 
+Detailed Theory:
+Go (Golang) was designed by Google to solve the problems of C++ (slow compilation, complex dependency management) and Python (lack of type safety, poor multithreading).
+
+Compilation & Execution: Go compiles directly to machine code (statically linked binaries). There is no virtual machine (like Java's JVM) or interpreter.
+
+The Runtime: Even though it compiles to a binary, Go embeds a small runtime in every executable. This runtime handles Garbage Collection (GC), goroutine scheduling, and memory allocation.
+
+Execution Order: A Go program does not just start at main(). It first initializes package-level variables, then runs any init() functions (you can have multiple per package), and finally invokes main().
