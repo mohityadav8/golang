@@ -1,1 +1,11 @@
+Detailed Theory:
 
+Fixed Size & Type Identity: How [3]int and [4]int are distinct types.
+
+Pass-By-Value Semantics: Unlike C/C++, assigning an array or passing it to a function copies the entire memory block.
+
+Memory Layout & Contiguity: Arrays are purely contiguous blocks of memory allocated on the stack (unless they escape to the heap).
+
+Alignment & Padding (Advanced): Explain how structs of arrays vs arrays of structs map to memory and affect CPU cache lines.
+
+Conceptual Code: A program demonstrating array memory addresses, pass-by-value cost, pointer-to-array semantics, and type strictness.
